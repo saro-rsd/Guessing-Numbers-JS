@@ -1,160 +1,172 @@
- :root {
-     --paper: #eef2ff;
-     --ink: #0b1f4d;
-     --royal: #1747d6;
-     --sun: #ffc83d;
-     --coral: #ff5a47;
-     --skyblue: #00c2ff;
-     --lightblue: #7994d3;
- }
+:root {
+    --paper: #eef2ff;
+    --ink: #0b1f4d;
+    --royal: #1747d6;
+    --sun: #ffc83d;
+    --coral: #ff5a47;
+    --skyblue: #00c2ff;
+    --lightblue: #7994d3;
+}
 
- * {
-     box-sizing: border-box;
- }
+* {
+    box-sizing: border-box;
+}
 
- body {
-     margin: 0;
-     min-height: 100vh;
-     background: var(--skyblue);
-     color: var(--ink);
-     font-family: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     padding: 40px 16px;
- }
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--skyblue);
+    color: var(--ink);
+    font-family: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 16px;
+}
 
- h1 {
-     font-size: clamp(2.2rem, 7vw, 4rem);
-     font-weight: 800;
-     letter-spacing: -0.03em;
-     line-height: 1;
-     margin: 0 0 28px;
-     text-align: center;
-     color: var(--royal);
- }
+h1 {
+    font-size: clamp(2.2rem, 7vw, 4rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin: 0 0 28px;
+    text-align: center;
+    color: var(--royal);
+}
 
- .game {
-     width: 100%;
-     max-width: 520px;
-     background: var(--royal);
-     color: #fff;
-     border-radius: 24px;
-     padding: 36px 28px 32px;
-     text-align: center;
-     box-shadow: 8px 8px 0 var(--ink);
- }
+.game {
+    width: 100%;
+    max-width: 520px;
+    background: var(--royal);
+    color: #fff;
+    border-radius: 24px;
+    padding: 36px 28px 32px;
+    text-align: center;
+    box-shadow: 8px 8px 0 var(--ink);
+}
 
- .mystery {
-     width: 96px;
-     height: 96px;
-     margin: 0 auto 20px;
-     border-radius: 24px;
-     background: var(--sun);
-     color: var(--ink);
-     font-size: 3.4rem;
-     font-weight: 800;
-     display: grid;
-     place-items: center;
-     transform: rotate(-4deg);
- }
+.mystery {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 20px;
+    border-radius: 24px;
+    background: var(--sun);
+    color: var(--ink);
+    font-size: 3.4rem;
+    font-weight: 800;
+    display: grid;
+    place-items: center;
+    transform: rotate(-4deg);
+}
 
- .game label {
-     display: block;
-     font-size: 1.15rem;
-     font-weight: 600;
-     margin-bottom: 14px;
- }
+.game label {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
 
- .chips {
-     display: grid;
-     grid-template-columns: repeat(5, 1fr);
-     gap: 8px;
-     margin-bottom: 16px;
- }
+.chips {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-bottom: 16px;
+}
 
- .chip {
-     font: inherit;
-     font-weight: 600;
-     padding: 10px 0;
-     border: 2px solid rgba(255, 255, 255, .35);
-     border-radius: 12px;
-     background: transparent;
-     color: #fff;
-     cursor: pointer;
-     transition: background .15s, color .15s, transform .1s;
- }
+.chip {
+    font: inherit;
+    font-weight: 600;
+    padding: 10px 0;
+    border: 2px solid rgba(255, 255, 255, .35);
+    border-radius: 12px;
+    background: var(--lightblue);
+    color: var(--paper);
+    cursor: pointer;
+    transition: background .15s, color .15s, transform .1s;
+}
 
- .chip:hover {
-     background: rgba(255, 255, 255, .15);
- }
+.chip:hover {
+    background: rgba(255, 255, 255, .35);
+}
 
- .chip.on {
-     background: #fff;
-     color: var(--royal);
-     border-color: #fff;
- }
+.chip.on {
+    background: #fff;
+    color: var(--royal);
+    border-color: #fff;
+}
 
- .chip:active {
-     transform: scale(.94);
- }
+.chip:active {
+    transform: scale(.94);
+}
 
- #guessNumber {
-     width: 100%;
-     font: inherit;
-     font-size: 1.1rem;
-     padding: 12px 14px;
-     border: 2px solid transparent;
-     border-radius: 12px;
-     text-align: center;
-     color: var(--ink);
- }
+#guessNumber {
+    width: 100%;
+    font: inherit;
+    font-size: 1.1rem;
+    padding: 12px 14px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    text-align: center;
+    color: var(--ink);
+}
 
- #guessNumber::placeholder {
-     color: #6b7aa6;
- }
+#guessNumber::placeholder {
+    color: #6b7aa6;
+}
 
- #submit {
-     width: 100%;
-     margin-top: 14px;
-     font: inherit;
-     font-size: 1.1rem;
-     font-weight: 800;
-     padding: 14px;
-     border: 0;
-     border-radius: 12px;
-     background: var(--sun);
-     color: var(--ink);
-     cursor: pointer;
-     box-shadow: 0 4px 0 var(--ink);
-     transition: transform .1s, box-shadow .1s;
- }
+#submit {
+    width: 100%;
+    margin-top: 14px;
+    font: inherit;
+    font-size: 1.1rem;
+    font-weight: 800;
+    padding: 14px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--sun);
+    color: var(--ink);
+    cursor: pointer;
+    box-shadow: 0 4px 0 var(--ink);
+    transition: transform .1s, box-shadow .1s;
+}
 
- .submit:active {
-     transform: translateY(3px);
-     box-shadow: 0 1px 0 var(--ink);
- }
+#submit:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 var(--ink);
+}
 
- #p1 {
-     min-height: 1.5em;
-     margin: 18px 0 0;
-     font-weight: 600;
- }
+#p1 {
+    min-height: 1.5em;
+    margin: 18px 0 0;
+    font-weight: 600;
+}
 
- :focus-visible {
-     outline: 3px solid var(--sun);
-     outline-offset: 2px;
- }
+:focus-visible {
+    outline: 3px solid var(--sun);
+    outline-offset: 2px;
+}
 
- #reset {
-     margin-top: 8px;
-     background: none;
-     border: 0;
-     color: #fff;
-     font: inherit;
-     text-decoration: underline;
-     cursor: pointer;
- }
- #correctImage{
-   padding: 300px;
- }
+#reset {
+    margin-top: 8px;
+    background: none;
+    border: 0;
+    color: #fff;
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.images {
+    margin-top: 32px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.images img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+}

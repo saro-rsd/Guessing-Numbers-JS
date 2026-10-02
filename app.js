@@ -31,16 +31,19 @@ function btnSubmitOnAction() {
     if (guessNumber === randomNumber) {
         mystery.textContent = randomNumber;
         p1.textContent = "Correct! You got it in " + tries + (tries === 1 ? " try." : " tries.");
-        Swal.fire({ icon: "success", title: "You got it!", text: "The number was " + randomNumber + "." });
         document.getElementById("correctImage").style.display = "block";
+        Swal.fire({ icon: "success", title: "You got it!", text: "The number was " + randomNumber + "." });
+        
     } else if (guessNumber < randomNumber) {
         p1.textContent = guessNumber + " is too low. Try higher.";
+       document.getElementById("wrongImage").style.display = "none";
         Swal.fire({ icon: "error", title: "Oops...", text: "Your guess is too low!" });
-        document.getElementById("wrongImage").style.display = "none";
+        
     } else {
         p1.textContent = guessNumber + " is too high. Try lower.";
+       document.getElementById("wrongImage").style.display = "block";
         Swal.fire({ icon: "error", title: "Oops...", text: "Your guess is too high!" });
-        document.getElementById("wrongImage").style.display = "block";
+        
     }
 }
 
